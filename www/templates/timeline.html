@@ -1,0 +1,25 @@
+
+<ion-view view-title="Timeline Laporan">
+
+      <div class="col col-20 floating">
+        <a href="#/app/plus">
+          <img id="plus-tog" src='img/plus.png'>
+        </a>
+      </div>
+
+  <ion-content>
+
+    <div class="list card" ng-repeat="bencana in bencana">
+    <div class="item item-divider calm">
+      {{bencana.title}}
+    </div>
+      <div class="item item-image">
+        <img class="instansi-button" id="ambulan-button" src={{bencana.src}}>
+      </div>
+    <div class="item item-divider">
+      {{bencana.tempat}}
+    </div>
+
+    </div>
+  </ion-content>
+</ion-view>

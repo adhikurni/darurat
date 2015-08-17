@@ -1,0 +1,41 @@
+<ion-view view-title="Lapor Bencana">      
+    <ion-content>
+		<div class="card">
+		  <div class="item item-divider calm">
+		    Informasi Laporan
+		  </div>
+		  <div class="item item-text-wrap">
+			<div class="list">
+			  <label class="item item-input item-select">
+			    <div class="input-label">
+			      Jenis Bencana
+			    </div>
+			    <select>
+			      <option selected>Kecelakaan</option>
+			      <option>Pohon Tumbang</option>
+			      <option>Kebakaran</option>
+			      <option>Banjir</option>
+			    </select>
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="Tempat">
+			  </label>
+			</div>
+		  </div>
+		</div>
+		  <div class="card">
+			  <div class="item item-divider calm">
+			    Ambil Gambar
+			  </div>
+			  <div class="item item-text-wrap" ng-controller="FotoCtrl">
+			    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+			    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/390x125">
+			    <button class="button" ng-click="takePicture()">Take Picture</button>
+
+			  </div>
+		  </div>
+			<button class="button button-block button-calm lapor">
+			  Laporkan
+			</button>
+    </ion-content>
+</ion-view>
